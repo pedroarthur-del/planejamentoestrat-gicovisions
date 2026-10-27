@@ -664,7 +664,8 @@ async function hashPass(v){
 }
 async function tryUnlock(ev){
   ev.preventDefault();const inp=document.getElementById("cv-pass"),gate=document.getElementById("gate"),msg=document.getElementById("cv-msg");
-  const ok=(await hashPass(inp.value.trim().toUpperCase()))===PASS_HASH;
+  const norm=inp.value.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^A-Za-z0-9]/g,"").toUpperCase();
+  const ok=(await hashPass(norm))===PASS_HASH;
   if(!ok){msg.textContent=inp.value?"Senha incorreta. Confira com o consultor responsável.":"Digite a senha para entrar.";gate.classList.add("bad");
     gate.classList.remove("shake");void gate.offsetWidth;gate.classList.add("shake");inp.select();return}
   gate.classList.remove("bad");msg.textContent="";inp.value="";
