@@ -1,3 +1,9 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
 <title>Planejamento Estratégico Visions</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +29,7 @@
   --teal:#2CB4C2; --teal-deep:#7BD3DC; --aqua:#1F5A60; --lime:#D7E07E; --lime-ink:#1C2005;
   --ok:#5CC27A; --ok-bg:#163423; --warn:#E5AE3A; --warn-bg:#3A2D0E; --late:#F0844F; --late-bg:#3D2014; --crit:#F2708E; --crit-bg:#3E1520;
   --idle:#6C8888; --idle-bg:#1A3133; --paper:#1B1916; --dot:#3A342E; --paper-muted:#B4A89D; --paper-ink:#F1EAE2; --paper-card:#25221F; --paper-line:#403A33; color-scheme:dark}
+[hidden]{display:none!important}
 *{box-sizing:border-box}
 html,body{min-height:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:14.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -262,6 +269,8 @@ td .m{color:var(--muted);font-size:12.5px}
 @keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
 @keyframes pulse{50%{box-shadow:0 0 0 4px color-mix(in srgb,var(--crit) 22%,transparent)}}
 </style>
+</head>
+<body>
 
 <div class="cover" id="cover" role="dialog" aria-labelledby="cv-title">
   <div class="mark">
@@ -960,3 +969,6 @@ window.addEventListener("hashchange",()=>{const v=location.hash.slice(1);if(["pa
   if(S.unlocked&&!S.demo){S.connected=true;connect(S.store)}
 })();
 </script>
+
+</body>
+</html>
